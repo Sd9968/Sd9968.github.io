@@ -4,8 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .menu-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 0;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-details {
+            max-width: 70%;
+        }
+        .menu-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .menu-description {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .menu-price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .menu-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .menu-buttons button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .menu-buttons button:hover {
+            opacity: 0.9;
+        }
+        .btn-order { background-color: #007bff; color: white; }
+    </style>
+
     <!-- Include model-viewer library -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
@@ -57,12 +120,12 @@
     <!-- Item 4 -->
     <div class="menu-item">
         <div class="menu-details">
-            <div class="menu-title">Spaghetti Bolognese</div>
-            <div class="menu-description">Traditional Italian pasta with rich meat sauce.</div>
+            <div class="menu-title">Biryani</div>
+            <div class="menu-description">t is a one-pot meal made by layering fragrant basmati rice with richly spiced meat, seafood, or vegetables.</div>
         </div>
         <div class="menu-price">$14.99</div>
         <div class="menu-buttons">
-            <button class="btn-order" onclick="showAR('https://cdn.glitch.global/f867f329-21d3-4ad9-a341-f9ba557ea144/crimson_delight.glb?v=1737523304244')">AR VIEW</button>
+            <button class="btn-order" onclick="showAR('https://cdn.glitch.global/f867f329-21d3-4ad9-a341-f9ba557ea144/best_biryani.glb?v=1737555519112AR VIEW</button>
         </div>
     </div>
 
@@ -75,16 +138,18 @@
         <div class="menu-price">$6.99</div>
         <div class="menu-buttons">
             <button class="btn-order" onclick="showAR('https://cdn.glitch.global/f867f329-21d3-4ad9-a341-f9ba557ea144/crimson_delight.glb?v=1737523304244')">AR VIEW</button>
+
         </div>
     </div>
 
 </div>
 
 <!-- Hidden model-viewer element -->
-<model-viewer id="ar-viewer" ar ar-modes="webxr scene-viewer quick-look" style="display:none;" camera-controls scale="0.5 0.5 0.5"></model-viewer>
+<model-viewer id="ar-viewer" ar ar-modes="webxr scene-viewer quick-look" style="display:none;"></model-viewer>
 
 <!-- Link to external JavaScript -->
 <script src="script.js"></script>
+
 
 </body>
 </html>
