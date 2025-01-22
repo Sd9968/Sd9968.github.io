@@ -4,71 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Menu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        header {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        .menu-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ddd;
-            padding: 1rem 0;
-        }
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-        .menu-details {
-            max-width: 70%;
-        }
-        .menu-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        .menu-description {
-            font-size: 0.9rem;
-            color: #555;
-        }
-        .menu-price {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #28a745;
-        }
-        .menu-buttons {
-            display: flex;
-            gap: 0.5rem;
-        }
-        .menu-buttons button {
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-        .menu-buttons button:hover {
-            opacity: 0.9;
-        }
-        .btn-order { background-color: #007bff; color: white; }
-    </style>
-
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
     <!-- Include model-viewer library -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
@@ -147,14 +84,8 @@
 <!-- Hidden model-viewer element -->
 <model-viewer id="ar-viewer" ar ar-modes="webxr scene-viewer quick-look" style="display:none;"></model-viewer>
 
-<script>
-// Function to show AR model
-function showAR(modelUrl) {
-    const viewer = document.querySelector('#ar-viewer');
-    viewer.src = modelUrl; // Set the GLB file URL
-    viewer.activateAR();   // Activate AR mode
-}
-</script>
+<!-- Link to external JavaScript -->
+<script src="script.js"></script>
 
 </body>
 </html>
